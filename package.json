@@ -1,4 +1,14 @@
 {
-  "name": "Casper",
-  "version": "0.9.3"
+  "name": "Noir",
+  "version": "0.0.1",
+  "description": "A minimal & modern Ghost theme,  mostly based on white space and easy-to-read typography.",
+  "author": "Gonçalo Morais <gnclmorais@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gnclmorais/Noir"
+  },
+  "bugs": {
+    "url": "https://github.com/gnclmorais/Noir/issues"
+  },
+  "license": "MIT"
 }

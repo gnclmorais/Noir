@@ -4,8 +4,7 @@
 [Casper](https://github.com/TryGhost/Casper) and inspired by 
 [Detox](http://eatapapaya.com/Detox/detox.html).
 
-An attempt to design & build a stylish, modern Ghost theme, 
-mostly based on white space and easy-to-read typography.
+A minimal & modern Ghost theme,  mostly based on white space and easy-to-read typography.
 
 ## Copyright & License
 
