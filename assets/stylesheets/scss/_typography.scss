@@ -1,0 +1,82 @@
+/**
+ * Typography
+ */
+h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+h2, h3, h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+
+div,
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+a {
+    @include transition(color, $timing-default, ease);
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    
+    &:after {
+        transition: $timing-default ease;
+        content: '';
+        height: 1px;
+        position: absolute;
+        left: 1px;
+        right: 0;
+        bottom: 2px;
+        background-color: $main-emphasis;
+    }
+    
+    &:hover {
+        color: $main-emphasis;
+        
+        &:after {
+            bottom: 1px;
+            @include transform(translate(0, 1px));
+        }
+    }
+}
+
+/**
+ * Font sizing
+ * Inspired on http://css-tricks.com/rems-ems/
+ */
+
+/* Document level adjustments */
+html {
+  font-size: 17px;
+}
+@media (max-width: 900px) {
+  html { font-size: 15px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 13px; }
+}
+
+/* Modules will scale with document */
+.header {
+  font-size: 1.5rem;
+}
+.footer {
+  font-size: 0.75rem;
+}
+.sidebar {
+  font-size: 0.85rem;
+}
+
+/* Type will scale with modules */
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 2em;
+}

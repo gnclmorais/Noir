@@ -7,6 +7,7 @@
 
     <article class="{{post_class}}">
 
+<!--
         {{! Each post has the blog logo at the top, with a link back to the home page }}
         <header class="post-header">
             <a class="blog-logo" href="{{@blog.url}}">
@@ -17,13 +18,13 @@
                 {{/if}}
             </a>
         </header>
+-->
 
         {{! Everything inside the #post tags pulls data from the post }}
         {{#post}}
-
-            <span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> {{tags prefix="on " separator=" | "}}</span>
-
             <h1 class="post-title">{{{title}}}</h1>
+
+            <div class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='Do MMMM YYYY'}}</time> &#8226; {{tags prefix=" " separator=" / "}}</div>
 
             <section class="post-content">
                 {{content}}

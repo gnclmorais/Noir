@@ -1,0 +1,38 @@
+/**
+ * Variables
+ */
+
+/**
+ * Colours
+ * http://coolors.co/111111-f7f9ef-565656-9b9b9b-ad0000
+ */
+
+// Base colours
+$black-almost:  #111111;
+$white-almost:  #f7f9ef;
+$grey-dark:     #565656;
+$grey-light:    #9b9b9b;
+$red-dark:      #ad0000;
+
+// Abstraction layer
+$main-light:        $white-almost;
+$main-dark:         $black-almost;
+$secondary-light:   $grey-light;
+$secondary-dark:    $grey-dark;
+$main-emphasis:     $red-dark;
+
+
+/**
+ * Margins & Paggins
+ */
+$padding-default: 20px;
+
+/**
+ * Dimensions
+ */
+$sidebar-width: 300px;
+
+/**
+ * Timings
+ */
+$timing-default: .2s;

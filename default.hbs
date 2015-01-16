@@ -14,18 +14,37 @@
 
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
+    {{! Fonts }}
+    {{! Main Titles ~ Either this font or Abril Fatface }}
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,900,400italic,900italic' rel='stylesheet' type='text/css'>
+    {{! Secondary titles}}
+    <link href='http://fonts.googleapis.com/css?family=Teko:700' rel='stylesheet' type='text/css'>
+    {{! Paragraph text }}
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600,800' rel='stylesheet' type='text/css'>
+    
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="{{asset "stylesheets/style.css"}}" />
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
+    {{! Omnipresent sidebar }}
+    <div class="sidebar">
+        <div class="sidebar-wrapper">
+            <h1 class="blog-title">{{@blog.title}}</h1>
+            <h2 class="blog-description">{{@blog.description}}</h2>
+        </div>
+    </div>
 
-    {{! Everything else gets inserted here }}
-    {{{body}}}
+    <div class="body">
+        <div class="body-wrapper">
+            {{! Everything else gets inserted here }}
+            {{{body}}}
+        </div>
+    </div>
 
+    <!--
     <footer class="site-footer">
         <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
         <div class="inner">
@@ -33,6 +52,7 @@
              <section class="poweredby">Proudly published with <a class="icon-ghost" href="https://ghost.org">Ghost</a></section>
         </div>
     </footer>
+    -->
 
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
@@ -40,6 +60,5 @@
     {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-
 </body>
 </html>

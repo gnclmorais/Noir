@@ -1,0 +1,17 @@
+// Title
+.post-title {
+    font-style: italic;
+}
+
+// Content
+.post-content {
+    img {
+        max-width: 120%;
+    }
+}
+
+// Meta information
+.post-meta {
+    color: $secondary-light;
+    text-align: center;
+}

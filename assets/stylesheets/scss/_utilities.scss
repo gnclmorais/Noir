@@ -1,0 +1,29 @@
+/**
+ * Utility classes & mixins
+ */
+
+// Default padding
+// Extending silent classes in Sass: http://csswizardry.com/2014/01/extending-silent-classes-in-sass/
+.wrapper-padding-default,
+%wrapper-padding-default {
+    padding: $padding-default;
+}
+
+/**
+ * Mixins
+ */
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+       -moz-transition: $transition-property $transition-time $method;
+        -ms-transition: $transition-property $transition-time $method;
+         -o-transition: $transition-property $transition-time $method;
+            transition: $transition-property $transition-time $method;
+}
+
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+       -moz-transform: $transforms;
+        -ms-transform: $transforms;
+         -o-transform: $transforms;
+            transform: $transforms;
+}

@@ -1,0 +1,12 @@
+/**
+ * Body
+ */
+.body {
+    max-width: 40rem;
+    margin-left: $sidebar-width;
+    padding-left: 5rem;
+    
+    &-wrapper {
+        @extend %wrapper-padding-default;
+    }
+}

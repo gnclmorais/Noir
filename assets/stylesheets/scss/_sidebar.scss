@@ -1,0 +1,16 @@
+/**
+ * Sidebar
+ */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: $sidebar-width;
+    background: $main-dark;
+    color: $main-light;
+    
+    &-wrapper {
+        @extend %wrapper-padding-default;
+    }
+}
