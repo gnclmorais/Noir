@@ -1,0 +1,15 @@
+/**
+ * Custom tweaks to Prism CSS
+ */
+
+/* Wraps lines, removing scroll */
+code[class*="language-"],
+pre[class*="language-"] {
+    white-space: pre-wrap;
+}
+
+/* Transparent background */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: transparent;
+}

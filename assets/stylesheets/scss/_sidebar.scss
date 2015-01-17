@@ -2,15 +2,27 @@
  * Sidebar
  */
 .sidebar {
+    display: table;
+    height: 100%;
     position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
     width: $sidebar-width;
     background: $main-dark;
     color: $main-light;
     
+    // Inner padding wrapper
     &-wrapper {
         @extend %wrapper-padding-default;
+        display: table-cell;
+        vertical-align: bottom;
+    }
+    
+    // Title
+    h1 {
+        
+    }
+    
+    // Subtitle
+    h2 {
+        
     }
 }

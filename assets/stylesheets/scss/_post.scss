@@ -1,17 +1,69 @@
 // Title
 .post-title {
     font-style: italic;
-}
-
-// Content
-.post-content {
-    img {
-        max-width: 120%;
-    }
+    margin-bottom: 0;
 }
 
 // Meta information
 .post-meta {
     color: $secondary-light;
     text-align: center;
+    margin-top: 1em;
+    
+    // Tags
+    a {
+        @include transition(opacity, $timing-default, ease);
+        background: $secondary-light;
+        color: $main-light;
+        opacity: .3;
+        padding: 1px 8px 3px;
+        border-radius: 3px;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+// Content
+.post-content {
+    margin-top: 3em;
+    
+    // Text links
+    a {
+        @include transition(color, $timing-default, ease);
+        position: relative;
+        
+        &:after {
+            transition: $timing-default ease;
+            content: '';
+            height: 1px;
+            background-color: $main-emphasis;
+            position: absolute;
+            left: 1px;
+            right: 0;
+            bottom: 2px;
+        }
+        
+        &:hover {
+            color: $main-emphasis;
+            
+            &:after {
+                bottom: 1px;
+                @include transform(translate(0, 1px));
+            }
+        }
+    }
+    
+    // Images
+    img {
+        max-width: 120%; // Wider than the text
+    }
+}
+
+// Footer
+.post-footer {
+    .share {
+        text-align: center;
+    }
 }

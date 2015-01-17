@@ -2,8 +2,13 @@
  * Utility classes & mixins
  */
 
+.hidden {
+    display: none;
+}
+
 // Default padding
-// Extending silent classes in Sass: http://csswizardry.com/2014/01/extending-silent-classes-in-sass/
+// Extending silent classes in Sass:
+// http://csswizardry.com/2014/01/extending-silent-classes-in-sass/
 .wrapper-padding-default,
 %wrapper-padding-default {
     padding: $padding-default;

@@ -1,13 +1,35 @@
 /**
  * Typography
  */
+
 h1 {
     font-family: 'Playfair Display', serif;
+    
+    .sidebar & {
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+    }
+}
+
+h2 {
+    .sidebar & {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        font-size: 1em;
+        letter-spacing: 1px;
+        color: $secondary-light;
+    }
 }
 
 h2, h3, h4 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+    text-rendering: optimizeLegibility;
 }
 
 div,
@@ -17,29 +39,32 @@ p {
 }
 
 a {
-    @include transition(color, $timing-default, ease);
     color: inherit;
     text-decoration: none;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+blockquote {
+    font-style: italic;
     position: relative;
     
-    &:after {
-        transition: $timing-default ease;
-        content: '';
-        height: 1px;
-        position: absolute;
-        left: 1px;
-        right: 0;
-        bottom: 2px;
-        background-color: $main-emphasis;
+    em {
+        font-style: normal;
     }
     
-    &:hover {
-        color: $main-emphasis;
-        
-        &:after {
-            bottom: 1px;
-            @include transform(translate(0, 1px));
-        }
+    &:before {
+        content: '&ldquo;';
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-size: 2em;
+        color: #9b9b9b;
+        position: absolute;
+        left: -.5em;
+        top: -.3em;
     }
 }
 
