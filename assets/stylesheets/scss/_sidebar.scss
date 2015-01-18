@@ -11,9 +11,8 @@
     
     // Inner padding wrapper
     &-wrapper {
-        @extend %wrapper-padding-default;
-        display: table-cell;
-        vertical-align: bottom;
+        height: 100%;
+        position: relative;
     }
     
     // Title
@@ -26,3 +25,36 @@
         
     }
 }
+
+    // Small section about me
+    .about-me {
+        @extend %wrapper-padding-default;
+    }
+
+        // About Me section of the sidebar
+        .find-me {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .social-link {
+                @include transition(opacity, $timing-default, ease);
+                display: inline;
+                opacity: .5;
+                font-size: 1.5em;
+                
+                span {
+                    width: 14.28%;
+                }
+                
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+    // Small section about the blog itself
+    .about-blog {
+        @extend %wrapper-padding-default;
+        position: absolute;
+        bottom: 0;
+    }

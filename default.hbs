@@ -30,6 +30,9 @@
     
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "stylesheets/style.css"}}" />
+    {{! Icomoon icons }}
+    <link rel="stylesheet" type="text/css" href="{{asset "fonts/icomoon/style.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "fonts/icomoon/style.custom.css"}}" />
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
@@ -38,8 +41,52 @@
     {{! Omnipresent sidebar }}
     <div class="sidebar">
         <div class="sidebar-wrapper">
-            <h1 class="blog-title">{{@blog.title}}</h1>
-            <h2 class="blog-description">{{@blog.description}}</h2>
+            <div class="about-me">
+                <div class="find-me">
+                    <a class="social-link"
+                       href="https://twitter.com/gnclmorais">
+                        <span class="icon-twitter">
+                        </span>
+                    </a>
+                    <a class="social-link"
+                       href="https://github.com/gnclmorais">
+                        <span class="icon-github"></span>
+                    </a>
+                    <a class="social-link"
+                       href="https://dribbble.com/gnclmorais">
+                        <span class="icon-dribbble"></span>
+                    </a>
+                    <a class="social-link"
+                       href="https://linkedin.com/in/gnclmorais/">
+                        <span class="icon-linkedin"></span>
+                    </a>
+                    <a class="social-link"
+                       href="https://plus.google.com/+GonçaloMorais">
+                        <span class="icon-google-plus"></span>
+                    </a>
+                    <a class="social-link"
+                       href="https://instagram.com/gnclmorais">
+                        <span class="icon-instagram"></span>
+                    </a>
+                    <a class="social-link"
+                       href="https://open.spotify.com/user/gnclmorais">
+                        <span class="icon-spotify"></span>
+                    </a>
+                </div>
+                <br>
+                <div class="mini-bio">
+                    
+                </div>
+            </div>
+            
+            <div class="about-blog">
+                <h1 class="blog-title">
+                    {{@blog.title}}
+                </h1>
+                <h2 class="blog-description">
+                    {{@blog.description}}
+                </h2>
+            </div>
         </div>
     </div>
 

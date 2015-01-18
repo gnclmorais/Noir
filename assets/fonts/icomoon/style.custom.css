@@ -1,0 +1,8 @@
+/**
+ * Custom tweaks to Icomoon CSS
+ */
+
+[class^="icon-"],
+[class*=" icon-"] {
+    cursor: pointer;
+}
