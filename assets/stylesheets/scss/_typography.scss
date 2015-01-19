@@ -2,30 +2,8 @@
  * Typography
  */
 
-h1,
-.home-template h2,
-.archive-template h2 {
-    font-family: 'Playfair Display', serif;
-    
-    .sidebar & {
-        font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 6px;
-    }
-}
-
-h2 {
-    .sidebar & {
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 300;
-        font-size: 1em;
-        letter-spacing: 1px;
-        color: $secondary-light;
-    }
-}
-
 h2, h3, h4 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 800;
 }
 
@@ -34,9 +12,33 @@ h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizeLegibility;
 }
 
+.home-template h2,
+.archive-template h2,
+.post-template h1 {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+}
+
+.sidebar {
+    h1 {
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        text-align: left;
+        letter-spacing: 6px;
+    }
+    
+    h2 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-size: 1em;
+        letter-spacing: 1px;
+        color: $secondary-light;
+    }
+}
+
 div,
 p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 300;
 }
 
@@ -50,23 +52,35 @@ strong {
   font-weight: 600;
 }
 
+// Smart quotes
+q, 
 blockquote {
+    quotes: "\201C" "\201D" "\2018" "\2019";
     font-style: italic;
     position: relative;
     
     em {
         font-style: normal;
     }
+}
+
+blockquote {
+    font-size: 1.5em;
+    position: relative;
     
     &:before {
-        content: '&ldquo;';
-        font-family: 'Playfair Display';
+        content: open-quote;
+        font-family: "Playfair Display";
         font-style: normal;
         font-size: 2em;
         color: #9b9b9b;
         position: absolute;
+        top: -.4em;
         left: -.5em;
-        top: -.3em;
+    }
+
+    &:after {
+        content: no-close-quote;
     }
 }
 

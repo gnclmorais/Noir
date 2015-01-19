@@ -28,6 +28,15 @@
 // Content
 .post-content {
     margin-top: 3em;
+
+    // Bigger spacing for some titles
+    h2 {
+        padding-top: 1em;
+        margin-top: 1.5em;
+    }
+    h4 {
+        margin-top: 2em;
+    }
     
     // Text links
     a {
@@ -64,6 +73,33 @@
 // Footer
 .post-footer {
     .share {
+        font-size: 2em;
         text-align: center;
+        margin: 1em 0;
+        
+        &:before {
+            content: '';
+            width: 50%;
+            border-top: 1px solid $secondary-light;
+            opacity: .5;
+            display: block;
+            position: relative;
+            left: 25%;
+            margin: 2em 0 1.5em;
+        }
+    }
+    
+        a {
+            @include transition(opacity $timing-default ease);
+            opacity: .4;
+            
+            &:hover {
+                opacity: 1;
+            }
+        }
+    
+    // Fix for the weirdly bigger Google+ symbol
+    .icon-google-plus {
+        font-size: .9em;
     }
 }
