@@ -23,7 +23,6 @@ h1, h2, h3, h4, h5, h6 {
     h1 {
         font-family: "Montserrat", sans-serif;
         text-transform: uppercase;
-        text-align: left;
         letter-spacing: 6px;
     }
     
@@ -93,7 +92,7 @@ blockquote {
 html {
   font-size: 17px;
 }
-@media (max-width: 900px) {
+@media (max-width: 1150px) {
   html { font-size: 15px; }
 }
 @media (max-width: 400px) {

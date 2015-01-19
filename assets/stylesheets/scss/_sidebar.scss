@@ -20,10 +20,10 @@ $personal-intro: $sidebar-width - $personal-avatar;
         position: relative;
     }
     
-    // Title & Subtitle
-    h1,
-    h2 {
-        text-align: left;
+    // Responsiveness
+    @include respond-to(medium) {
+        position: static;
+        width: 100%;
     }
 }
 
@@ -110,6 +110,12 @@ $personal-intro: $sidebar-width - $personal-avatar;
     // Small section about the blog itself
     .about-blog {
         @extend %wrapper-padding-default;
+        text-align: left;
         position: absolute;
         bottom: 0;
+        
+        @include respond-to(medium) {
+            width: 100%;
+            text-align: center;
+        }
     }

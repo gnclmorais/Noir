@@ -17,6 +17,8 @@
 /**
  * Mixins
  */
+ 
+// Transitions
 @mixin transition($args...) {
   -webkit-transition: $args;
      -moz-transition: $args;
@@ -25,10 +27,39 @@
           transition: $args;
 }
 
+// Transforms
 @mixin transform($transforms) {
     -webkit-transform: $transforms;
        -moz-transform: $transforms;
         -ms-transform: $transforms;
          -o-transform: $transforms;
             transform: $transforms;
+}
+
+/**
+ * Breakpoints
+ * Idea from http://www.sitepoint.com/managing-responsive-breakpoints-sass/
+ * Note: min-width was originally used on this snippet; however, since this
+ *       Ghost theme was not developed mobile-first, using breakpoints to 
+ *       change looks as the screen shrinks was a more appropriate approach.
+ */
+$breakpoints: (
+    'small':  (max-width:  767px),
+    'medium': (max-width: 1000px),
+    'large':  (max-width: 1200px)
+);
+  
+@mixin respond-to($name) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $name) {
+        // Prints a media query based on the value
+        @media #{inspect(map-get($breakpoints, $name))} {
+            @content;
+        }
+    }
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Warning: no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+    }
 }
