@@ -1,6 +1,11 @@
 /**
  * Sidebar
  */
+ 
+// Some dimensions
+$personal-avatar: 80px;
+$personal-intro: $sidebar-width - $personal-avatar;
+    
 .sidebar {
     display: table;
     height: 100%;
@@ -24,17 +29,71 @@
 
     // Small section about me
     .about-me {
-        @extend %wrapper-padding-default;
+        $border-width: 40px;
+        color: $main-dark;
+        //@extend %wrapper-padding-default;
+        
+        @include transition(all $timing-default ease);
+        max-width: 75px;
+        max-height: 75px;
+        overflow: hidden;
+        background: $main-light;
+        position: relative;
+        
+        .sidebar:hover & {
+            max-width: 300px;
+            max-height: 150px;
+            
+            &:after {
+                border-top: $border-width / 3 solid transparent;
+                border-left: $border-width / 3 solid transparent;
+                border-right: $border-width / 3 solid $main-dark;
+                border-bottom: $border-width / 3 solid $main-dark;
+            }
+        }
+        
+        &:after {
+            @include transition(all $timing-default ease);
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border-top: $border-width solid transparent;
+            border-left: $border-width solid transparent;
+            border-right: $border-width solid $main-dark;
+            border-bottom: $border-width solid $main-dark;
+        }
     }
+    
+        .mini-me {
+            width: $personal-avatar;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .mini-bio {
+            @extend %wrapper-padding-default;
+            width: $personal-intro - $padding-default * 2;
+            position: absolute;
+            top: 0;
+            left: $personal-avatar;
+        }
 
         // About Me section of the sidebar
         .find-me {
+            @extend %wrapper-padding-default;
+            width: $sidebar-width - $padding-default * 2;
+            margin-top: $personal-avatar;
             display: flex;
             justify-content: space-between;
+            
+            &-wrapper {
+            }
         }
 
             .social-link {
-                @include transition(opacity, $timing-default, ease);
+                @include transition(opacity $timing-default ease);
                 display: inline;
                 opacity: .5;
                 font-size: 1.5em;
