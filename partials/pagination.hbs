@@ -1,0 +1,27 @@
+<nav class="pagination" role="navigation">
+    {{#if prev}}
+    <a class="newer-posts" href="{{page_url prev}}">
+        <div class="pagination-section page-link">
+            &larr; Newer posts
+        </div>
+    </a>
+    {{else}}
+    <div class="pagination-section"></div>
+    {{/if}}
+    
+    <div class="pagination-section">
+        <span class="page-number">
+            {{page}} / {{pages}}
+        </span>
+    </div>
+    
+    {{#if next}}
+    <a class="older-posts" href="{{page_url next}}">
+        <div class="pagination-section page-link">
+            Older posts &rarr;
+        </div>
+    </a>
+    {{else}}
+    <div class="pagination-section"></div>
+    {{/if}}
+</nav>

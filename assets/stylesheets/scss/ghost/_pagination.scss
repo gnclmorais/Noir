@@ -1,0 +1,40 @@
+.pagination {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    color: $secondary-dark;
+}
+/*
+    .newer-posts,
+    .older-posts {
+        position: absolute;
+    }
+
+    .newer-posts {
+        left: 0;
+    }
+    
+    .older-posts {
+        right: 0;
+    }
+*/
+    .pagination-section {
+        width: 33%;
+        float: left;
+        padding: .5em 0;
+        border-radius: 3px;
+    }
+    
+     .page-link {
+        @include transition(
+            background $timing-default ease,
+            color $timing-default ease
+        );
+        
+        &:hover {
+            background: $main-dark;
+            color: $main-light;
+        }
+    }
