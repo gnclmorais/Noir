@@ -63,6 +63,19 @@ $personal-intro: $sidebar-width - $personal-avatar;
             border-right: $border-width solid $main-dark;
             border-bottom: $border-width solid $main-dark;
         }
+        
+        // Responsiveness
+        @include respond-to(medium) {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            
+            .sidebar:hover & {
+                width: 100%;
+                max-width: 3000px;
+            }
+        }
     }
     
         .mini-me {
@@ -70,6 +83,11 @@ $personal-intro: $sidebar-width - $personal-avatar;
             position: absolute;
             top: 0;
             left: 0;
+            
+            @include respond-to(medium) {
+                display: block;
+                position: relative;
+            }
         }
         
         .mini-bio {
@@ -78,6 +96,15 @@ $personal-intro: $sidebar-width - $personal-avatar;
             position: absolute;
             top: 0;
             left: $personal-avatar;
+            
+            @include respond-to(medium) {
+                width: 50%;
+                padding: 14px;
+            }
+            
+            @include respond-to(small) {
+                display: none;
+            }
         }
 
         // About Me section of the sidebar
@@ -88,7 +115,16 @@ $personal-intro: $sidebar-width - $personal-avatar;
             display: flex;
             justify-content: space-between;
             
-            &-wrapper {
+            @include respond-to(medium) {
+                margin-top: 10px;
+                position: absolute;
+                top: 0;
+                right: 0
+            }
+            
+            @include respond-to(small) {
+                left: 50%;
+                margin-left: -($sidebar-width - $padding-default * 2) / 2;
             }
         }
 
@@ -110,12 +146,22 @@ $personal-intro: $sidebar-width - $personal-avatar;
     // Small section about the blog itself
     .about-blog {
         @extend %wrapper-padding-default;
+        @include transition(all $timing-default ease);
         text-align: left;
         position: absolute;
         bottom: 0;
         
         @include respond-to(medium) {
             width: 100%;
+            position: relative;
+            z-index: 1;
             text-align: center;
+            padding-left: 0;
+            padding-right: 0;
+            margin-top: -80px;
+            
+            .sidebar:hover & {
+                margin-top: 0;
+            }
         }
     }

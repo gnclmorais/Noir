@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .home-template h2,
 .archive-template h2,
-.post-template h1 {
+.post h1 {
     font-family: "Playfair Display", serif;
     text-align: center;
 }
@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5, h6 {
         font-family: "Montserrat", sans-serif;
         text-transform: uppercase;
         letter-spacing: 6px;
+        margin: 0;
     }
     
     h2 {
@@ -95,7 +96,7 @@ html {
 @media (max-width: 1150px) {
   html { font-size: 15px; }
 }
-@media (max-width: 400px) {
+@media (max-width: 700px) {
   html { font-size: 13px; }
 }
 

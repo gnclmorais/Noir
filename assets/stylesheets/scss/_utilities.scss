@@ -1,19 +1,7 @@
 /**
  * Utility classes & mixins
  */
-
-.hidden {
-    display: none;
-}
-
-// Default padding
-// Extending silent classes in Sass:
-// http://csswizardry.com/2014/01/extending-silent-classes-in-sass/
-.wrapper-padding-default,
-%wrapper-padding-default {
-    padding: $padding-default;
-}
-
+ 
 /**
  * Mixins
  */
@@ -44,7 +32,7 @@
  *       change looks as the screen shrinks was a more appropriate approach.
  */
 $breakpoints: (
-    'small':  (max-width:  767px),
+    'small':  (max-width:  650px),
     'medium': (max-width: 1000px),
     'large':  (max-width: 1200px)
 );
@@ -63,3 +51,20 @@ $breakpoints: (
         + "Please make sure it is defined in `$breakpoints` map.";
     }
 }
+
+/**
+ * Utility classes
+ */
+
+.hidden {
+    display: none;
+}
+
+// Default padding
+// Extending silent classes in Sass:
+// http://csswizardry.com/2014/01/extending-silent-classes-in-sass/
+.wrapper-padding-default,
+%wrapper-padding-default {
+    padding: $padding-default;
+}
+
