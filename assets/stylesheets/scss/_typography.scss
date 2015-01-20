@@ -2,6 +2,13 @@
  * Typography
  */
 
+// Post title
+// At home Ghost uses h2, inside the post uses h1
+.post-title {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+}
+
 h2, h3, h4 {
     font-family: "Open Sans", sans-serif;
     font-weight: 800;
@@ -10,13 +17,6 @@ h2, h3, h4 {
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
     text-rendering: optimizeLegibility;
-}
-
-.home-template h2,
-.archive-template h2,
-.post h1 {
-    font-family: "Playfair Display", serif;
-    text-align: center;
 }
 
 .sidebar {
@@ -53,6 +53,8 @@ strong {
 }
 
 // Smart quotes
+// Idea from http://css-tricks.com/almanac/properties/q/quotes/
+// and from http://webdesign.tutsplus.com/articles/start-using-quotation-marks-the-correct-way--webdesign-16905
 q, 
 blockquote {
     quotes: "\201C" "\201D" "\2018" "\2019";
