@@ -2,15 +2,37 @@
  * Typography
  */
 
-// Post title
-// At home Ghost uses h2, inside the post uses h1
-.post-title {
-    font-family: "Playfair Display", serif;
-    text-align: center;
+html {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.125em; // 16 * 1.125 = 18px
+    background: $main-light;
+    color: $main-dark;
+    
+    @media (max-width: 1150px) {
+        & {
+            font-size: 15px;
+        }
+    }
+    @media (max-width: 700px) {
+        & {
+            font-size: 13px;
+        }
+    }
 }
 
+// Set up all typography outside `.sidebar`
+.body {
+    // Post title - basically an h1
+    // (Ghost uses h2 on the homepage, but uses h1 inside the posts)
+    .post-title {
+        font-family: "Playfair Display", serif;
+        text-align: center;
+    }
+    
+}
+
+
 h2, h3, h4 {
-    font-family: "Open Sans", sans-serif;
     font-weight: 800;
 }
 
@@ -70,7 +92,7 @@ blockquote {
     font-size: 1.5em;
     position: relative;
     
-    &:before {
+    &::before {
         content: open-quote;
         font-family: "Playfair Display";
         font-style: normal;
@@ -81,7 +103,7 @@ blockquote {
         left: -.5em;
     }
 
-    &:after {
+    &::after {
         content: no-close-quote;
     }
 }
@@ -92,6 +114,7 @@ blockquote {
  */
 
 /* Document level adjustments */
+/*
 html {
   font-size: 17px;
 }
@@ -101,7 +124,7 @@ html {
 @media (max-width: 700px) {
   html { font-size: 13px; }
 }
-
+*/
 /* Modules will scale with document */
 .header {
   font-size: 1.5rem;

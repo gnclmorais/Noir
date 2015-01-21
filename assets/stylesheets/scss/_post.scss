@@ -43,7 +43,7 @@
         @include transition(color, $timing-default, ease);
         position: relative;
         
-        &:after {
+        &::after {
             transition: $timing-default ease;
             content: '';
             height: 1px;
@@ -57,7 +57,7 @@
         &:hover {
             color: $main-emphasis;
             
-            &:after {
+            &::after {
                 bottom: 1px;
                 @include transform(translate(0, 1px));
             }
@@ -77,7 +77,7 @@
         text-align: center;
         margin: 1em 0;
         
-        &:before {
+        &::before {
             content: '';
             width: 50%;
             border-top: 1px solid $secondary-light;

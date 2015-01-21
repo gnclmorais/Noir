@@ -45,7 +45,7 @@ $personal-intro: $sidebar-width - $personal-avatar;
             max-height: 150px;
             background: $main-light;
             
-            &:after {
+            &::after {
                 $border-width-pseudo: $border-width / 3;
                 $border-colour-pseudo: $main-dark;
                 border-top: $border-width-pseudo solid transparent;
@@ -57,7 +57,7 @@ $personal-intro: $sidebar-width - $personal-avatar;
             }
         }
         
-        &:after {
+        &::after {
             @include transition(all $timing-default ease);
             content: "";
             position: absolute;
