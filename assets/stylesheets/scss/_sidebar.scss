@@ -37,12 +37,13 @@ $personal-intro: $sidebar-width - $personal-avatar;
         max-width: 75px;
         max-height: 75px;
         overflow: hidden;
-        background: $main-light;
+        background: $main-dark;
         position: relative;
         
-        .sidebar:hover & {
+        &:hover {
             max-width: 300px;
             max-height: 150px;
+            background: $main-light;
             
             &:after {
                 border-top: $border-width / 3 solid transparent;
@@ -62,6 +63,22 @@ $personal-intro: $sidebar-width - $personal-avatar;
             border-left: $border-width solid transparent;
             border-right: $border-width solid $main-dark;
             border-bottom: $border-width solid $main-dark;
+            
+            // Peek animation
+            $peek-border: $border-width - 10px;
+            $peek-duration: .3s;
+            $peek-repetitions: 2;
+            @include keyframes('peek') {
+                50% {
+                    border-top: $peek-border solid transparent;
+                    border-left: $peek-border solid transparent;
+                    border-right: $peek-border solid $main-dark;
+                    border-bottom: $peek-border solid $main-dark;
+                }
+            }
+            .sidebar:hover & {
+                @include animation('peek .4s 2');
+            }
         }
         
         // Responsiveness
@@ -71,7 +88,7 @@ $personal-intro: $sidebar-width - $personal-avatar;
             left: 0;
             right: 0;
             
-            .sidebar:hover & {
+            &:hover {
                 width: 100%;
                 max-width: 3000px;
             }
@@ -83,7 +100,7 @@ $personal-intro: $sidebar-width - $personal-avatar;
             position: absolute;
             top: 0;
             left: 0;
-            
+
             @include respond-to(medium) {
                 display: block;
                 position: relative;
