@@ -46,10 +46,14 @@ $personal-intro: $sidebar-width - $personal-avatar;
             background: $main-light;
             
             &:after {
-                border-top: $border-width / 3 solid transparent;
-                border-left: $border-width / 3 solid transparent;
-                border-right: $border-width / 3 solid $main-dark;
-                border-bottom: $border-width / 3 solid $main-dark;
+                $border-width-pseudo: $border-width / 3;
+                $border-colour-pseudo: $main-dark;
+                border-top: $border-width-pseudo solid transparent;
+                border-left: $border-width-pseudo solid transparent;
+                border-right: $border-width-pseudo solid $border-colour-pseudo;
+                border-bottom: $border-width-pseudo solid $border-colour-pseudo;
+                // Remove any ongoing animation:
+                @include animation('none !important');
             }
         }
         
@@ -79,6 +83,7 @@ $personal-intro: $sidebar-width - $personal-avatar;
             .sidebar:hover & {
                 @include animation('peek .4s 2');
             }
+            
         }
         
         // Responsiveness
