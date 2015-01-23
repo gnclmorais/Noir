@@ -1,11 +1,16 @@
 /******************************************************************************\
 |* TYPOGRAPHY
+|* Inspired by http://www.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/
+|* Also good resource http://css-tricks.com/rems-ems/
 \******************************************************************************/
 
+/**
+ * Base
+ */
 html {
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
-    font-size: 1.125em; // 16 * 1.125 = 18px
+    font-size: 1.125em; // 16 (browser's default) * 1.125 = 18px
     background: $main-light;
     color: $main-dark;
     
@@ -22,101 +27,51 @@ html {
     }
 }
 
-body {
-    line-height: 1.5em; // 18 * 1.5 = 27px
-}
-
-// Set up all typography outside `.sidebar`
-.body {
-    padding-top: 3em; // 27 * 3 = 81px
-}
-
-
 /**
  * Headings
+ *   Base font size: 18px
+ *   Line height:    27px (18px x 1.5em)
+ *   h1 font size:   54px
+ *   h2 font size:   45px
+ *   h3 font size:   36px
+ *   h4 font size:   27px
+ *   h5 font size:   27px
+ *   h6 font size:   27px
  */
-
 h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizeLegibility;
-    margin-bottom: 1em;
     font-weight: 800;
 }
 
-// (magic number) / (font size) = (line height)
-.post-title,
 h1 {
     font-size: 3em;   /* 54px --> 54 / 18 = 3 */
     line-height: 1em; /* 54px --> 54 / 54 = 1 */
+    margin: 1.5em 0 1em; /* Overrides normalize.css */
 }
 
 h2 {
     font-size: 2.5em;   /* 45px --> 45 / 18 = 2.5 */
     line-height: 1.2em; /* 27px --> 54 / 45 = 1.2 */
+    margin: 1.8em 0 1.2em; /* Overrides normalize.css */
 }
 
 h3 {
     font-size: 2em;     /* 36px --> 36 / 18 = 2 */
     line-height: 1.5em; /* 27px --> 54 / 36 = 1.5 */
+    margin: 1.5em 0 .75em; /* Overrides normalize.css */
 }
 
-h4 {
-    font-size: 1.5em;   /* 27px --> 27 / 18 = 1.5 */
-    line-height: 1.5em; /* 27px --> 54 / 27 = 1.5 */
-}
-
+h4,
 h5,
 h6 {
-    font-size: 1em;     /* 18px --> 18 / 18 = 1 */
-    line-height: 1.5em; /* 27px --> 27 / 18 = 1.5 */
+    font-size: 1.5em; /* 27px --> 27 / 18 = 1.5 */
+    line-height: 1em; /* 27px --> 27 / 27 = 1 */
+    margin: 1.5em 0 .5em; /* Overrides normalize.css */
 }
 
-
-
-p {
-    margin-bottom: 1em;
-}
-
-
-
-
-
-// Post title - basically an h1
-    // (Ghost uses h2 on the homepage, but uses h1 inside the posts)
-    .post-title {
-        font-family: "Playfair Display", serif;
-        text-align: center;
-    }
-
-
-
-h2, h3, h4 {
-}
-
-
-
-.sidebar {
-    h1 {
-        font-family: "Montserrat", sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 6px;
-        margin: 0;
-    }
-    
-    h2 {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 300;
-        font-size: 1em;
-        letter-spacing: 1px;
-        color: $secondary-light;
-    }
-}
-
-div,
-p {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
-}
-
+/**
+ * Other general typographic elements
+ */
 a {
     color: inherit;
     text-decoration: none;
@@ -125,6 +80,10 @@ a {
 b,
 strong {
   font-weight: 600;
+}
+
+p {
+  margin: 1.5em 0;
 }
 
 // Smart quotes
@@ -159,43 +118,4 @@ blockquote {
     &::after {
         content: no-close-quote;
     }
-}
-
-/**
- * Font sizing
- * Inspired on http://css-tricks.com/rems-ems/
- */
-
-/* Document level adjustments */
-/*
-html {
-  font-size: 17px;
-}
-@media (max-width: 1150px) {
-  html { font-size: 15px; }
-}
-@media (max-width: 700px) {
-  html { font-size: 13px; }
-}
-*/
-/* Modules will scale with document */
-.header {
-  font-size: 1.5rem;
-}
-.footer {
-  font-size: 0.75rem;
-}
-.sidebar {
-  font-size: 0.85rem;
-}
-
-/* Type will scale with modules */
-h1 {
-  font-size: 3em;
-}
-h2 {
-  font-size: 2.5em;
-}
-h3 {
-  font-size: 2em;
 }

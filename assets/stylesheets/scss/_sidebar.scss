@@ -187,3 +187,18 @@ $personal-intro: $sidebar-width - $personal-avatar;
             }
         }
     }
+    
+        .blog-title {
+            font-family: "Montserrat", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin: 0;
+        }
+        
+        .blog-description {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 300;
+            font-size: 1em;
+            letter-spacing: 1px;
+            color: $secondary-light;
+        }

@@ -1,6 +1,9 @@
-// Title
+// Title - basically an h1
+// (Ghost uses h2 on the homepage, but uses h1 inside the posts)
 .post-title {
+    font-family: "Playfair Display", serif;
     font-style: italic;
+    text-align: center;
 }
 
 // Meta information
@@ -27,15 +30,6 @@
 // Content
 .post-content {
     margin-top: 3em;
-
-    // Bigger spacing for some titles
-    h2 {
-        padding-top: 1em;
-        margin-top: 0;
-    }
-    h4 {
-        margin-top: 2em;
-    }
     
     // Text links
     a {

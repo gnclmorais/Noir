@@ -3,7 +3,9 @@
  */
 .body {
     max-width: 40rem;
+    line-height: 1.5em; // 18 * 1.5 = 27px
     margin-left: $sidebar-width;
+    padding-top: 3em; // 27 * 3 = 81px
     padding-left: 5rem;
     
     &-wrapper {
