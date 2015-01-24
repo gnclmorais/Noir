@@ -17,12 +17,12 @@ html {
     // TODO
     @media (max-width: 1150px) {
         & {
-            font-size: 15px;
+            font-size: 16px;
         }
     }
     @media (max-width: 700px) {
         & {
-            font-size: 13px;
+            font-size: 15px;
         }
     }
 }
@@ -51,13 +51,13 @@ h1 {
 
 h2 {
     font-size: 2.5em;   /* 45px --> 45 / 18 = 2.5 */
-    line-height: 1.2em; /* 27px --> 54 / 45 = 1.2 */
+    line-height: 1.2em; /* 52px --> 54 / 45 = 1.2 */
     margin: 1.8em 0 1.2em; /* Overrides normalize.css */
 }
 
 h3 {
     font-size: 2em;     /* 36px --> 36 / 18 = 2 */
-    line-height: 1.5em; /* 27px --> 54 / 36 = 1.5 */
+    line-height: 1.5em; /* 54px --> 54 / 36 = 1.5 */
     margin: 1.5em 0 .75em; /* Overrides normalize.css */
 }
 
@@ -111,7 +111,7 @@ blockquote {
         font-size: 2em;
         color: #9b9b9b;
         position: absolute;
-        top: -.4em;
+        top: 0;
         left: -.5em;
     }
 

@@ -5,16 +5,14 @@
     max-width: 40rem;
     line-height: 1.5em; // 18 * 1.5 = 27px
     margin-left: $sidebar-width;
-    padding-top: 3em; // 27 * 3 = 81px
+    padding-top: 1.5em; // 18 * 1.5 = 27px
     padding-left: 5rem;
-    
-    &-wrapper {
-        @extend %wrapper-padding-default;
-    }
     
     // Responsiveness
     @include respond-to(medium) {
         padding-left: 0;
         margin: 0 auto;
+        padding-left: 1em;
+        padding-right: 1em;
     }
 }

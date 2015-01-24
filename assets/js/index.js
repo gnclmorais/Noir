@@ -1,59 +1,26 @@
 /**
- * Main JS file for Casper behaviours
+ * Main JS file for Noir behaviours
  */
 
 /*globals jQuery, document */
 (function ($) {
-    "use strict";
+    'use strict';
+    
+    // From https://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript/4819886#4819886
+    function isTouchDevice() {
+        return 'ontouchstart' in window // works on most browsers 
+            || 'onmsgesturechange' in window; // works on ie10
+    };
+    
+    if (isTouchDevice()) {
+        $('.sidebar').on('click', function () {
+            $(this).toggleClass('open');
+        });
+    } else {
+        $('.sidebar').addClass('hover');
+    }
 
-    $(document).ready(function(){
-
-        $(".post-content").fitVids();
-
-        function casperFullImg() {
-            $("img").each( function() {
-                var contentWidth = $(".post-content").outerWidth(); // Width of the content
-                var imageWidth = $(this)[0].naturalWidth; // Original image resolution
-
-                if (imageWidth >= contentWidth) {
-                    $(this).addClass('full-img');
-                } else {
-                    $(this).removeClass('full-img');
-                }
-            });
-        };
-
-        casperFullImg();
-        $(window).smartresize(casperFullImg);
-
+    $(document).ready(function () {
+        $('.post-content').fitVids();
     });
-
 }(jQuery));
-
-(function($,sr){
-
-  // debouncing function from John Hann
-  // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
-  var debounce = function (func, threshold, execAsap) {
-      var timeout;
-
-      return function debounced () {
-          var obj = this, args = arguments;
-          function delayed () {
-              if (!execAsap)
-                  func.apply(obj, args);
-              timeout = null;
-          };
-
-          if (timeout)
-              clearTimeout(timeout);
-          else if (execAsap)
-              func.apply(obj, args);
-
-          timeout = setTimeout(delayed, threshold || 100);
-      };
-  }
-  // smartresize 
-  jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
-
-})(jQuery,'smartresize');
