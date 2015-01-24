@@ -2,13 +2,39 @@
 
 [Ghost](http://github.com/tryghost/ghost/) theme, built upon 
 [Casper](https://github.com/TryGhost/Casper).
-
 Inspired by [Detox](http://eatapapaya.com/Detox/detox.html) and 
 [Heidi](https://github.com/interslice/ghost-theme-heidi).
 
 This theme will be a work in progress, since it will go through several
 iterations throughout time. Every time I would want change or improve
 on my blog, this theme will probably change. Stay tuned.
+
+Favicon based on a concept I presented on [Dribbble](https://dribbble.com/shots/558569-Game-Of-Webs-House-Clarke?list=users&offset=6).
+
+
+## Instructions
+
+### Install
+`git clone` this project to the `content/themes` folder of a Ghost instalation.
+To run Ghost, just type `npm start` on its folder. Don’t forget that you need
+to go to Ghost’s administration page and select this theme before using it.
+
+### Compile SCSS
+To compile Sass (SCSS) files into a single CSS file, run the following command on
+`assets/stylesheets`:
+```
+sass --watch scss/main.scss:style.css \
+     --style compressed
+```
+
+### Live preview
+If you have [BrowserSync](https://github.com/shakyShane/browser-sync)
+installed, you can run it as well to instantly check the changes you make to
+your `.hbs`, `.scss` and `.js` files:
+```
+browser-sync start --proxy "localhost:2368" \
+                   --files "assets/stylesheets/*.css, *.hbs, *.js"
+```
 
 
 ## Copyright & License
