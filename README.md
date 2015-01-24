@@ -1,10 +1,15 @@
 # Noir
 
 [Ghost](http://github.com/tryghost/ghost/) theme, built upon 
-[Casper](https://github.com/TryGhost/Casper) and inspired by 
-[Detox](http://eatapapaya.com/Detox/detox.html).
+[Casper](https://github.com/TryGhost/Casper).
 
-A minimal & modern Ghost theme,  mostly based on white space and easy-to-read typography.
+Inspired by [Detox](http://eatapapaya.com/Detox/detox.html) and 
+[Heidi](https://github.com/interslice/ghost-theme-heidi).
+
+This theme will be a work in progress, since it will go through several
+iterations throughout time. Every time I would want change or improve
+on my blog, this theme will probably change. Stay tuned.
+
 
 ## Copyright & License
 
