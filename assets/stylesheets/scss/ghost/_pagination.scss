@@ -1,3 +1,8 @@
+/******************************************************************************\
+|* PAGINATION
+|* Ghost element
+\******************************************************************************/
+
 .pagination {
     text-align: center;
     position: relative;
@@ -6,20 +11,7 @@
     margin-bottom: 2em;
     color: $secondary-dark;
 }
-/*
-    .newer-posts,
-    .older-posts {
-        position: absolute;
-    }
 
-    .newer-posts {
-        left: 0;
-    }
-    
-    .older-posts {
-        right: 0;
-    }
-*/
     .pagination-section {
         width: 33%;
         float: left;

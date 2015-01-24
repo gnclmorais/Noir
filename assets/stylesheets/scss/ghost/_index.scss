@@ -1,17 +1,18 @@
-.home-template,
-.archive-template {
-    // Each article (post excerpts)
-    article {
-        // Thin line separating articles
-        &::after {
-            content: '';
-            display: block;
-            width: 50%;
-            position: relative;
-            left: 25%;
-            border-top: 1px solid $secondary-light;
-            opacity: .5;
-            margin-top: 3em;
-        }
+/******************************************************************************\
+|* INDEX
+|* Ghost element
+\******************************************************************************/
+
+article {
+    // Thin line separating articles
+    &::after {
+        content: '';
+        display: block;
+        width: 50%;
+        position: relative;
+        left: 25%;
+        border-top: 1px solid $secondary-light;
+        opacity: .5;
+        margin-top: 3em;
     }
 }

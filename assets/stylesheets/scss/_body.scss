@@ -1,12 +1,13 @@
-/**
- * Body
- */
+/******************************************************************************\
+|* BODY
+\******************************************************************************/
+
 .body {
     max-width: 40rem;
     line-height: 1.5em; // 18 * 1.5 = 27px
-    margin-left: $sidebar-width;
     padding-top: 1.5em; // 18 * 1.5 = 27px
     padding-left: 5rem;
+    margin-left: $sidebar-width;
     
     // Responsiveness
     @include respond-to(medium) {

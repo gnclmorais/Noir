@@ -1,6 +1,6 @@
-/**
- * Sidebar
- */
+/******************************************************************************\
+|* SIDEBAR
+\******************************************************************************/
  
 // Some dimensions
 $personal-avatar: 80px;
@@ -29,11 +29,9 @@ $personal-intro: $sidebar-width - $personal-avatar;
 
     // Small section about me
     .about-me {
+        @include transition(all $timing-default ease);
         $border-width: 40px;
         color: $main-dark;
-        //@extend %wrapper-padding-default;
-        
-        @include transition(all $timing-default ease);
         max-width: 80px;
         max-height: 80px;
         overflow: hidden;

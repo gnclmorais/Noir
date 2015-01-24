@@ -1,12 +1,12 @@
-/**
- * Utility classes & mixins
- */
- 
+/******************************************************************************\
+|* UTILITIES
+|* Utility classes & mixins
+\******************************************************************************/
+
 /**
  * Mixins
  */
- 
-// Transitions
+
 @mixin transition($args...) {
   -webkit-transition: $args;
      -moz-transition: $args;
@@ -15,7 +15,6 @@
           transition: $args;
 }
 
-// Transforms
 @mixin transform($transforms) {
     -webkit-transform: $transforms;
        -moz-transform: $transforms;
@@ -23,6 +22,7 @@
          -o-transform: $transforms;
             transform: $transforms;
 }
+
 
 /**
  * Breakpoints
@@ -51,6 +51,7 @@ $breakpoints: (
         + "Please make sure it is defined in `$breakpoints` map.";
     }
 }
+
 
 /**
  * Animations
@@ -100,4 +101,3 @@ $breakpoints: (
 %wrapper-padding-default {
     padding: $padding-default;
 }
-

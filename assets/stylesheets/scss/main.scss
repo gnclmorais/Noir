@@ -1,10 +1,12 @@
 @import "normalize";
 
+// Base & utilities
 @import "variables";
 @import "utilities";
 @import "typography";
 @import "base";
 
+// Basic structure
 @import "sidebar";
 @import "body";
 
@@ -12,4 +14,4 @@
 @import "ghost/pagination";
 @import "ghost/index";
 @import "ghost/tags";
-@import "post";
+@import "ghost/post";

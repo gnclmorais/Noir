@@ -11,10 +11,7 @@ html {
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
     font-size: 1.125em; // 16 (browser's default) * 1.125 = 18px
-    background: $main-light;
-    color: $main-dark;
     
-    // TODO
     @media (max-width: 1150px) {
         & {
             font-size: 16px;
@@ -26,6 +23,7 @@ html {
         }
     }
 }
+
 
 /**
  * Headings
@@ -69,6 +67,7 @@ h6 {
     margin: 1.5em 0 .5em; /* Overrides normalize.css */
 }
 
+
 /**
  * Other general typographic elements
  */
@@ -86,9 +85,12 @@ p {
   margin: 1.5em 0;
 }
 
-// Smart quotes
-// Idea from http://css-tricks.com/almanac/properties/q/quotes/
-// and from http://webdesign.tutsplus.com/articles/start-using-quotation-marks-the-correct-way--webdesign-16905
+
+/**
+ * Smart quotes
+ * Idea from http://css-tricks.com/almanac/properties/q/quotes/
+ * and from http://webdesign.tutsplus.com/articles/start-using-quotation-marks-the-correct-way--webdesign-16905
+ */
 q, 
 blockquote {
     quotes: "\201C" "\201D" "\2018" "\2019";
