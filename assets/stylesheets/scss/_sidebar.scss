@@ -154,7 +154,13 @@ $personal-intro: $sidebar-width - $personal-avatar;
                 margin-top: 10px;
                 position: absolute;
                 top: 0;
-                right: 0
+                right: 0;
+                z-index: -1;
+                
+                .about-me:hover &,
+                .open & {
+                    z-index: 0;
+                }
             }
             
             @include respond-to(small) {
@@ -162,12 +168,6 @@ $personal-intro: $sidebar-width - $personal-avatar;
                 left: 50%;
                 font-size: 1.2em;
                 margin-left: -($sidebar-width - $padding-default * 2) / 2;
-                z-index: -1;
-                
-                .about-me:hover &,
-                .open & {
-                    z-index: 0;
-                }
             }
         }
 
