@@ -16,12 +16,18 @@ $personal-intro: $sidebar-width - $personal-avatar;
     
     // Inner padding wrapper
     &-wrapper {
-        height: 100%;
-        position: relative;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        
+        @include respond-to(medium) {
+            position: static;
+        }
     }
     
     // Responsiveness
     @include respond-to(medium) {
+        display: block;
         position: static;
         width: 100%;
     }
