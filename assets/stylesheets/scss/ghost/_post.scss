@@ -66,6 +66,13 @@
     img {
         max-width: 100%;
     }
+    
+    // Inline code
+    p code {
+        background: white;
+        padding: 3px 5px;
+        border-radius: 3px;
+    }
 }
 
 // Footer
