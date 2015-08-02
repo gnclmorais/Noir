@@ -1,4 +1,4 @@
-/* http://prismjs.com/download.html?themes=prism&languages=markup+css+css-extras+clike+javascript+scss+bash+python+http+git+less+markdown&plugins=line-numbers */
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+bash+css-extras+git+haskell+http+less+markdown+python+scss&plugins=line-numbers */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
@@ -9,7 +9,7 @@ code[class*="language-"],
 pre[class*="language-"] {
 	color: black;
 	text-shadow: 0 1px white;
-	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
